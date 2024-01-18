@@ -1,0 +1,7 @@
+#!/bin/zsh
+alias ta="tmux new-session -A -s main"
+alias config="/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME"
+alias song-dl='noglob yt-dlp -x  --embed-thumbnail --audio-quality 0 --audio-format opus -o "%(artist)s - %(title)s.%(ext)s" --parse-metadata "%(release_year)s:%(meta_date)s" --add-metadata'
+alias c="cd $COLLEGEDIR"
+alias s="cd $HOME/Documents/Google\ Drive/sb/"
+alias ls="exa"

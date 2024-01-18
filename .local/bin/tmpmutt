@@ -1,0 +1,17 @@
+#!/bin/sh
+usage (){
+	echo "Usage: tmpmutt [USERNAME]"
+	exit 0
+}
+if [ $# -lt 1 ]
+then
+	usage
+fi
+
+tmpconfig=$(mktemp)
+username=$1
+sed "s/dbk/$username/g" ~/.config/neomutt/accountrc >> $tmpconfig
+sed "s/.*source.*//g" ~/.config/neomutt/neomuttrc >> $tmpconfig
+neomutt -F $tmpconfig
+rm $tmpconfig
+exit

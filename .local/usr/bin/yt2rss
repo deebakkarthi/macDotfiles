@@ -1,0 +1,35 @@
+#!/bin/sh
+usage() {
+    progname=$(basename $0)
+    printf "Usage: $progname [-h|-c|URL]
+    -h: Print this help message
+    -c: Copy to clipboard
+    URL: YouTube channel URL
+    If no arguements are passed $progname reads from STDIN\n"
+    exit 1
+}
+
+
+get_rss() {
+    curl -L -s $1  | sed  "s/>/>\n/g"  | grep "rss+xml" | sed "s/.* href=\"\(.*\)\".*/\1/"
+}
+
+
+if [ $# -eq 0 ]; then
+    while read url
+    do
+        get_rss $url
+    done;
+else
+    case $1 in
+        -h)
+            usage
+            ;;
+        -c)
+            get_rss $2 | pbcopy
+            ;;
+        *)
+            get_rss $1
+            ;;
+    esac
+fi

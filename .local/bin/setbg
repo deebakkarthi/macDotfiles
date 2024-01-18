@@ -1,0 +1,8 @@
+#!/bin/sh
+if [[ "$#" -gt 0 ]]; then
+    file=$1
+else
+    wallpaper_dir=$HOME/media/pics/wallpapers
+    file=$(ls -d $wallpaper_dir/* | shuf -n1) 
+fi
+xwallpaper --focus $file

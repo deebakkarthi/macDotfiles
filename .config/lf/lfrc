@@ -1,0 +1,72 @@
+# interpreter for shell commands
+set shell sh
+
+# set '-eu' options for shell commands
+# These options are used to have safer shell commands. Option '-e' is used to
+# exit on error and option '-u' is used to give error for unset variables.
+# Option '-f' disables pathname expansion which can be useful when $f, $fs, and
+# $fx variables contain names with '*' or '?' characters. However, this option
+# is used selectively within individual commands as it can be limiting at
+# times.
+set shellopts '-eu'
+
+# set internal field separator (IFS) to "\n" for shell commands
+# This is useful to automatically split file names in $fs and $fx properly
+# since default file separator used in these variables (i.e. 'filesep' option)
+# is newline. You need to consider the values of these options and create your
+# commands accordingly.
+set ifs "\n"
+
+# leave some space at the top and the bottom of the screen
+set scrolloff 10
+
+set drawbox
+set preview true
+set previewer '~/.config/lf/scope'
+
+map a unarchive
+map <a-h> cd
+map <a-o> cd ~/college/senior/semester_7/
+map <a-s> cd "~/Documents/Google Drive/sb/"
+map <a-a> mv_archive 
+map D mv_trash
+
+cmd bulkrename ${{
+    tmpfile_old="$(mktemp)"
+    tmpfile_new="$(mktemp)"
+
+    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+
+    echo "$fs" > "$tmpfile_old"
+    echo "$fs" > "$tmpfile_new"
+    $EDITOR "$tmpfile_new"
+
+    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+
+    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
+    do
+        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
+    done
+
+    rm -f "$tmpfile_old" "$tmpfile_new"
+    lf -remote "send $id unselect"
+}}
+
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+
+cmd mv_archive ${{
+    mv "$f" "$HOME/.archive/"
+}}
+
+cmd mv_trash ${{
+    mv "$f" "$HOME/.Trash/"
+}}

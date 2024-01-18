@@ -1,0 +1,3 @@
+#!/bin/sh
+scrot -q 100 $HOME/media/pics/ss/%Y-%m-%d-%T.png -e 'notify-send "Screenshot" "$f
+saved" -i $f'

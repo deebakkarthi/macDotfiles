@@ -1,0 +1,42 @@
+set certificate_file="~/.config/neomutt/certificates"
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+# Set the follow variables in accountrc file
+#set my_pass=""
+#set folder=""
+#set imap_pass=$my_pass
+#set smtp_url= ""
+#set smtp_pass=$my_pass
+#
+#set realname=""
+#set from=""
+
+source "accountrc"
+set spoolfile="+INBOX"
+set record="+Sent"
+set trash="+Trash"
+set postponed="+Drafts"
+
+mailboxes =INBOX =Sent =Drafts =Archive =Trash =Junk 
+
+bind index,pager g noop
+bind index gg first-entry
+bind index G last-entry
+bind index j next-entry
+bind index k previous-entry 
+bind index h noop
+bind index l display-message
+
+bind pager gg top
+bind pager G bottom
+bind pager h exit
+bind pager j next-line
+bind pager k previous-line
+bind pager l view-attachments
+
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Cl sidebar-open
+bind index,pager B sidebar-toggle-visible

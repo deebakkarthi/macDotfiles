@@ -1,0 +1,3 @@
+#!/bin/sh
+dir=$(date +"%Y_%m_%d")
+mkdir $dir

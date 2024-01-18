@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ "$#" -lt 1 ]; then
+	echo "Usage: logweight WEIGHT" >&2
+	exit 1
+fi
+weight_file="$HOME/.local/share/weight/weight.csv"
+curr_date=$(date +"%Y-%m-%d")
+last_date=$(tail -n 1 $weight_file | cut -d , -f 1)
+if [ $last_date = $curr_date ]; then
+    echo "There is already data for today"
+    exit 1
+else
+    printf "%s,%.2f\n" $curr_date $1 >> $weight_file
+fi

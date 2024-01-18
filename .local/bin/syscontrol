@@ -1,0 +1,7 @@
+#!/bin/sh
+choice=$(echo -e "Shutdown\nReboot" | dmenu -p "What do you want to do?" -fn "monospace:size=14")
+case $choice in
+	"Shutdown")sudo shutdown now;;
+	"Reboot")sudo reboot now;;
+	*)exit;;
+esac

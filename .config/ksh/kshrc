@@ -1,0 +1,43 @@
+#!/bin/sh
+path_append() {
+	for arg in "$@"; do
+		test -d "${arg}" || continue
+		PATH=$(echo "$PATH" | sed -e "s;:${arg}:;:;g;" -e "s;^${arg}:;;" -e "s;:${arg};;")
+		export PATH="${PATH:"+${PATH}:"}${arg}"
+	done
+}
+
+path_prepend() {
+	for arg in "$@"; do
+		test -d "${arg}" || continue
+		PATH=$(echo "$PATH" | sed -e "s;:${arg}:;:;g;" -e "s;^${arg}:;;" -e "s;:${arg};;")
+		export PATH="${arg}${PATH:+":${PATH}"}"
+	done
+}
+
+
+set -o vi
+
+
+export PS1='\[\e[;1;32m$(logname)@$(hostname) \e[;0;m in \e[;1;32m $PWD $ \e[0m\]'
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/deebakkarthi/.local/share/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/deebakkarthi/.local/share/conda/etc/profile.d/conda.sh" ]; then
+        . "/Users/deebakkarthi/.local/share/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/deebakkarthi/.local/share/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+path_prepend "$HOME/.local/bin"\
+	"$HOME/.local/usr/bin"
+
+[ -f "$HOME/.config/ksh/aliasrc" ] && . "$HOME/.config/ksh/aliasrc"

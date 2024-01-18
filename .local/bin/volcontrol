@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ $1 = "i" ]
+then
+	pamixer -i 5
+elif [ $1 = "d" ]
+then
+	pamixer -d 5
+elif [ $1 = "t" ]
+then
+	pamixer -t
+fi
+kill -35 $(pidof dwmblocks)

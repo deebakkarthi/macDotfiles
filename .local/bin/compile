@@ -1,0 +1,24 @@
+#!/bin/sh
+if [ -z "$1" ]
+then
+	echo "Usage: compile [file]"
+	exit $E_NOARGS
+fi
+file="$1"
+base="${file%.*}"
+ext="${file##*.}"
+case "$ext" in
+	c)
+		cc $file
+		;;
+	tex)
+		pdflatex -shell-escape $file
+		;;
+	md)
+		pandoc -T pdf -o $base.pdf $file
+		;;
+	*)
+		echo "compile: No compiler for $file"
+		;;
+esac
+exit

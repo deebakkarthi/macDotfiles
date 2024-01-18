@@ -1,0 +1,7 @@
+[core]
+	editor = nvim
+[user]
+	name = Deebakkarthi C R
+	email = dbk@deebakkarthi.com
+[init]
+	defaultBranch = main

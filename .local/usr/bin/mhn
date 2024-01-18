@@ -1,0 +1,27 @@
+#!/bin/sh
+
+progname="$(basename "$0")"
+usage () {
+    echo "usage: ${progname} [TITLE] [DATE] [-h]"
+}
+
+if [ "$#" -lt "1" ]; then
+    file="$(date +"%Y_%m_%d").md"
+    if [ -e "$file" ]; then
+        echo "$progname: File already exists"
+        exit 1
+    fi
+    touch "$file"
+    echo "---\nTitle: $(date +"%Y-%m-%d")\nDate: $(date +"%Y-%m-%d")\n---" >> "$file"
+    exit 0
+fi
+
+# Only one arg
+if [ -z "$2" ] && [ -n "$1" ]; then
+    if (echo "$1" | grep -Eq "^[0-9]{4}_[0-9]{2}_[0-9]{2}$"); then 
+        echo "---\nTitle: $1"
+    else
+    fi
+    exit 0
+fi
+

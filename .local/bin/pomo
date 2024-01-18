@@ -1,0 +1,10 @@
+#!/bin/sh
+if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
+    BROWN_NOISE_FILE="/Users/deebakkarthi/Music/originals/brown.opus"
+    tmux move-window -t 9
+    mpv --no-resume-playback $BROWN_NOISE_FILE
+else
+    echo "pomo: Execute inside a tmux session"
+    exit 1
+fi
+
