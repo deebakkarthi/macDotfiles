@@ -20,15 +20,10 @@ return {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			javascript = { "prettierd" },
+			typescript = { "prettierd" },
+			typescriptreact = { "prettierd" },
+			javascriptreact = { "prettierd" },
 		},
-		-- Set up format-on-save
-		-- format_on_save = { timeout_ms = 500, lsp_fallback = true },
-		-- Customize formatters
-		-- formatters = {
-		-- 	shfmt = {
-		-- 		prepend_args = { "-i", "2" },
-		-- 	},
-		-- },
 	},
 	init = function()
 		-- If you want the formatexpr, here is the place to set it

@@ -27,7 +27,7 @@ set previewer '~/.config/lf/scope'
 map a unarchive
 map <a-h> cd
 map <a-o> cd ~/college/senior/semester_7/
-map <a-s> cd "~/Documents/Google Drive/sb/"
+map <a-s> cd "~/Documents/Drive/sb/"
 map <a-a> mv_archive 
 map D mv_trash
 

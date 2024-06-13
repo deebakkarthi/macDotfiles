@@ -51,20 +51,40 @@ export HISTFILE=0
 
 . $ZDOTDIR/aliasrc && source $ZDOTDIR/aliasrc
 
+
+eval "$(zoxide init zsh --cmd cd)"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/deebakkarthi/.local/share/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/deebakkarthi/.local/share/conda/etc/profile.d/conda.sh" ]; then
-        . "/Users/deebakkarthi/.local/share/conda/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/deebakkarthi/.local/share/conda/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 
-eval "$(zoxide init zsh --cmd cd)"
+
+# Create x86 conda environment
+create_x86_conda_environment () {
+
+  # example usage: create_x86_conda_environment myenv_x86 python=3.9
+  CONDA_SUBDIR=osx-64 conda create -n $@
+  conda activate $1
+
+}
+
+# Create ARM conda environment
+create_ARM_conda_environment () {
+
+  # example usage: create_ARM_conda_environment myenv_x86 python=3.9
+  CONDA_SUBDIR=osx-arm64 conda create -n $@
+  conda activate $1
+
+}
