@@ -1,6 +1,14 @@
 #!/bin/zsh
+
+# Conda tab completion
+fpath+="$HOME/.config/zsh/plugins/conda-zsh-completion"
+
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
+zstyle ':completion::complete:*' use-cache 1
+zstyle ":conda_zsh_completion:*" use-groups true
+zstyle ":conda_zsh_completion:*" show-unnamed true
+zstyle ":conda_zsh_completion:*" sort-envs-by-time true
 zmodload zsh/complist
 #Hidden files
 _comp_options+=(globdots)

@@ -30,3 +30,5 @@ esac
 . "$CARGO_HOME/env"
 PATH="$PATH:$HOME/.local/usr/bin:$HOME/.local/bin"
 
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
