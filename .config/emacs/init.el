@@ -13,6 +13,7 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 (setq use-package-verbose nil)
+(setq use-package-compute-statistics t)
 
 (use-package gcmh
   :diminish gcmh-mode
@@ -34,9 +35,8 @@
                      gcs-done)))
 
 (use-package no-littering)
-(setq auto-save-file-name-transforms
-      `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
+(no-littering-theme-backups)
 
 
 (setq visible-bell nil)
@@ -52,7 +52,6 @@
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
-
 
 (use-package evil
   :init
@@ -97,3 +96,36 @@
   ;; "[D]" followed by the file's title.  Read the doc string of
   ;; `denote-rename-buffer-format' for how to modify this.
   (denote-rename-buffer-mode 1))
+
+(use-package ef-themes)
+(ef-themes-select 'ef-dark)
+
+(use-package nerd-icons
+  :ensure t)
+(use-package nerd-icons-dired
+  :ensure t
+  :if (display-graphic-p)
+  :hook
+  (dired-mode . nerd-icons-dired-mode))
+
+
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode))
+
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
+
+(setq insert-directory-program "gls")
+(use-package dired
+  :ensure nil
+  :custom ((dired-listing-switches "-al --group-directories-first")
+	   (dired-use-ls-dired t)
+	   )
+  )
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))

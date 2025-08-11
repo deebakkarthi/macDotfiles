@@ -8,8 +8,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export COLLEGEDIR="$HOME/college/senior/semester_7"
-
 export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
@@ -29,6 +27,13 @@ esac
 
 . "$CARGO_HOME/env"
 PATH="$PATH:$HOME/.local/usr/bin:$HOME/.local/bin"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby
+
