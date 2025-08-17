@@ -29,11 +29,7 @@ esac
 PATH="$PATH:$HOME/.local/usr/bin:$HOME/.local/bin"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
-
+export HOMEBREW_TEMP="$HOME/.local/tmp"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby
 
