@@ -23,6 +23,14 @@ return {
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
 			javascriptreact = { "prettierd" },
+			c = { "clang_format" },
+		},
+		formatters = {
+			clang_format = {
+				prepend_args = {
+					"--style=file:/Users/deebakkarthi/.local/share/nvim/clang-format"
+				},
+			},
 		},
 	},
 	init = function()

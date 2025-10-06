@@ -25,11 +25,8 @@ set preview true
 set previewer '~/.config/lf/scope'
 
 map a unarchive
-map <a-h> cd
-map <a-o> cd ~/college/senior/semester_7/
-map <a-s> cd "~/Documents/Drive/sb/"
-map <a-a> mv_archive 
-map D mv_trash
+map P cp_print
+
 
 cmd bulkrename ${{
     tmpfile_old="$(mktemp)"
@@ -62,11 +59,7 @@ cmd unarchive ${{
   esac
 }}
 
-
-cmd mv_archive ${{
-    mv "$f" "$HOME/.archive/"
-}}
-
-cmd mv_trash ${{
-    mv "$f" "$HOME/.Trash/"
+cmd cp_print ${{
+        cp "$f" "$HOME/Downloads/0print"
+        lf -remote "send $id echo 'Moved $f to the print_dir'"
 }}
