@@ -1,6 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
+		"folke/neodev.nvim",
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"hrsh7th/cmp-nvim-lsp",
@@ -12,6 +13,7 @@ return {
 		"j-hui/fidget.nvim",
 	},
 	config = function()
+		require("neodev").setup({})
 		require("fidget").setup({
 			notification = {
 				window = {

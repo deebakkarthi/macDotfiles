@@ -7,6 +7,10 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+--vim.opt.linebreak = true
+--vim.opt.textwidth = 80
+--vim.opt.formatoptions = "t"
+
 
 vim.opt.swapfile = false
 vim.opt.backup = false

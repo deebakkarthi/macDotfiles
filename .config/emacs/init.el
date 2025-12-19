@@ -76,7 +76,18 @@
   :config
   (evil-collection-init))
 
-(use-package org)
+(use-package org
+  :config
+  (setq org-M-RET-may-split-line '((default . nil)))
+  (setq org-insert-heading-respect-content t)
+  (setq org-directory "~/Documents/org/")
+  (setq org-agenda-files (list org-directory))
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer t)
+  )
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "CANCEL(c!)" "DONE(d!)")))
+
 
 (use-package denote
   :ensure t
@@ -89,7 +100,7 @@
    ("C-c n d" . denote-dired)
    ("C-c n g" . denote-grep))
   :config
-  (setq denote-directory (expand-file-name "~/org/"))
+  (setq denote-directory (expand-file-name "~/Documents/org/"))
 
   ;; Automatically rename Denote buffers when opening them so that
   ;; instead of their long file name they have, for example, a literal
