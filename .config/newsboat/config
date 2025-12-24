@@ -1,6 +1,9 @@
 #show-read-feeds no
 auto-reload yes
 
+confirm-mark-all-feeds-read no
+confirm-mark-feed-read no
+
 browser mpv
 
 bind-key j down
@@ -30,7 +33,7 @@ color info red black bold
 color article white default bold
 
 
-highlight all "---.*---" yellow
+highlight all "---.*---" green default
 highlight feedlist ".*(0/0))" black
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
 highlight article "(^Link:.*|^Date:.*)" default default
