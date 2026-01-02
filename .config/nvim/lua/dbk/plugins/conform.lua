@@ -19,6 +19,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "isort", "black" },
+			html = { "prettierd" },
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
