@@ -1,7 +1,7 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 -- leader that is local to a buffer. I am not going to use this.
 -- So setting it to be the same as global leader
-vim.g.maplocalleader = ' '
+vim.g.maplocalleader = " "
 
 -- For pretty icons and glyphs
 vim.g.have_nerd_font = true
@@ -10,7 +10,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 
 -- Disable the mouse. Duh
-vim.opt.mouse = ''
+vim.opt.mouse = ""
 
 -- Status line already shows the mode. So vim doesn't have to show it again
 -- vim.o.showmode = false
@@ -23,13 +23,13 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Add signcolumn to the left which is used to show errors
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Time to wait before writing to disk. Default of 4s is way too long.
 -- In case of a crash you may lose data if it is that long.
 vim.opt.updatetime = 250
 
--- Mapped sequence time to complete. Default of 1s is too long. 
+-- Mapped sequence time to complete. Default of 1s is too long.
 -- Just type fast or have small sequences(Don't be like emacs)
 vim.opt.timeoutlen = 300
 
@@ -39,7 +39,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- Substituition live preview
-vim.o.inccommand = 'nosplit'
+vim.o.inccommand = "nosplit"
 
 -- Highlight the line that you are currently on
 vim.o.cursorline = false
@@ -53,17 +53,14 @@ vim.o.scrolloff = 5
 vim.o.confirm = true
 
 -- Clear the highlighted results of the previous search
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Highlight the text that was yanked
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('dbk-highlight-yank', { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("dbk-highlight-yank", { clear = true }),
+	callback = function()
+		vim.hl.on_yank()
+	end,
 })
-
-
-
 require("config.lazy")

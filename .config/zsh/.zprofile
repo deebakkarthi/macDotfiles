@@ -36,3 +36,5 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export HOMEBREW_TEMP="$HOME/.local/tmp"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+
+export PATH="$HOME/.elan/bin:$PATH"
