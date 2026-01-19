@@ -18,13 +18,15 @@ return {
 		-- Define your formatters
 		formatters_by_ft = {
 			lua = { "stylua" },
-			python = { "isort", "black" },
+			python = { "black" },
 			html = { "prettierd" },
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			c = { "clang_format" },
+			cpp = { "clang_format" },
+			tex = { "tex-fmt" },
 		},
 		formatters = {
 			clang_format = {

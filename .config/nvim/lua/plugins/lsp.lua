@@ -33,6 +33,28 @@ return {
 					})
 				end,
 			},
+			{ "j-hui/fidget.nvim", opts = {} },
 		},
+		config = function()
+			-- Register nvim-cmp lsp capabilities
+			vim.lsp.config("*", { capabilities = require("cmp_nvim_lsp").default_capabilities() })
+
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(event)
+					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = event.buf })
+					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = event.buf })
+					vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = event.buf })
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = event.buf })
+					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = event.buf })
+					vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = event.buf })
+					vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, { buffer = event.buf })
+				end,
+			})
+			vim.diagnostic.config({
+				underline = false,
+				severity_sort = true,
+				float = { border = "single", source = "if_many" },
+			})
+		end,
 	},
 }

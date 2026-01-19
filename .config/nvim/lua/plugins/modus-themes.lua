@@ -11,6 +11,9 @@ return {
 				-- a different color
 				line_nr_column_background = false,
 				sign_column_background = false,
+				styles = {
+					comments = { italic = true },
+				},
 			})
 			vim.cmd([[colorscheme modus_vivendi]])
 		end,

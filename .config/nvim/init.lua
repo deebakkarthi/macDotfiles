@@ -13,7 +13,7 @@ vim.opt.number = true
 vim.opt.mouse = ""
 
 -- Status line already shows the mode. So vim doesn't have to show it again
--- vim.o.showmode = false
+vim.o.showmode = false
 
 -- enable undofile
 vim.opt.undofile = true
@@ -24,6 +24,11 @@ vim.opt.smartcase = true
 
 -- Add signcolumn to the left which is used to show errors
 vim.opt.signcolumn = "yes"
+
+-- Show the 80 char limit column
+vim.opt.colorcolumn = "80"
+
+vim.opt.showmatch = true
 
 -- Time to wait before writing to disk. Default of 4s is way too long.
 -- In case of a crash you may lose data if it is that long.
@@ -52,8 +57,41 @@ vim.o.scrolloff = 5
 -- Ask for confirmation before executing commands that may fail due to unsaved buffer
 vim.o.confirm = true
 
+vim.o.termguicolors = true
+
+vim.o.wrap = false
+
+vim.o.incsearch = true
+vim.o.hlsearch = true
+
+vim.o.swapfile = false
+vim.o.backup = false
+vim.o.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
+vim.o.undofile = true
+
 -- Clear the highlighted results of the previous search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Use "J" to move the below line up without moving the cursor
+vim.keymap.set("n", "J", "mzJ`z")
+
+-- Key cursor in the middle
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- By default if you select a text in visual mode and replace it by pasting
+-- something, your cut buffer is now filled with the replaced text.
+-- This keymap retains the contents of the cut buffer and discards the replaced
+-- text
+vim.keymap.set("x", "<leader>p", '"_dP')
+-- Delete without altering the cut buffer
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
+
+-- Yank into system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Highlight the text that was yanked
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -63,4 +101,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
+
 require("config.lazy")

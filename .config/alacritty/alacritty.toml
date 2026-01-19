@@ -1,21 +1,21 @@
 
 [font]
-size = 22
+size = 18
 
 [font.bold]
-family = "UbuntuMono Nerd Font"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "UbuntuMono Nerd Font"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "UbuntuMono Nerd Font"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "UbuntuMono Nerd Font"
+family = "IosevkaTerm Nerd Font Mono"
 style = "Regular"
 
 [scrolling]
