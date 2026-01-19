@@ -15,7 +15,11 @@ return {
 			},
 			{
 				"mason-org/mason.nvim",
-				opts = {},
+				opts = {
+					ui = {
+						border = "single"
+					}
+				},
 			},
 			{
 				"mason-org/mason-lspconfig.nvim",
