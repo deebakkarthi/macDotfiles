@@ -16,6 +16,8 @@ return {
 				},
 			})
 			vim.cmd([[colorscheme modus_vivendi]])
+			-- Fix weird black float borders
+			vim.api.nvim_set_hl(0, "FloatBorder", { link = "NormalFloat" })
 		end,
 	},
 }
