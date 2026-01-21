@@ -17,8 +17,8 @@ return {
 				"mason-org/mason.nvim",
 				opts = {
 					ui = {
-						border = "single"
-					}
+						border = "single",
+					},
 				},
 			},
 			{
@@ -60,6 +60,7 @@ return {
 				underline = false,
 				severity_sort = true,
 				float = { border = "single", source = "if_many" },
+				virtual_text = true,
 			})
 		end,
 	},
