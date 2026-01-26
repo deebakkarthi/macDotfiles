@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Copies the most recent file (ctime) from DOWNLOADS_DIR to current dir
+
+DOWNLOADS_DIR="$HOME/Downloads"
+LATEST_FILE=$(find "$DOWNLOADS_DIR"\
+	-exec stat -f "%c %N" {} \; | sort  -r | head -1 | cut -d ' ' -f 2)
+cp "$LATEST_FILE" "$PWD"
