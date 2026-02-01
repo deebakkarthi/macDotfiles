@@ -1,3 +1,4 @@
+;; Variables are locally scoped
 ;; -*- lexical-binding: t; -*-
 (require 'package)
 
@@ -43,8 +44,9 @@
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
-(set-frame-font "Aporetic Sans Mono:size=18" nil t)
-
+;; A frame is OS window. What you would call a "pane" is what emacs
+;; considers a window.
+(set-frame-font "IosevkaTerm Nerd Font Mono:size=18" nil t)
 
 ;; Disable the damn thing by making it disposable.
 (setq custom-file (make-temp-file "emacs-custom-"))
@@ -84,7 +86,12 @@
   (setq org-agenda-files (list org-directory))
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
+  (global-set-key (kbd "C-c l") #'org-store-link)
+  (global-set-key (kbd "C-c a") #'org-agenda)
+  (global-set-key (kbd "C-c c") #'org-capture)
   )
+
+
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "CANCEL(c!)" "DONE(d!)")))
 
@@ -120,11 +127,13 @@
   (dired-mode . nerd-icons-dired-mode))
 
 
+;; Completion
 (use-package vertico
   :ensure t
   :init
   (vertico-mode))
 
+; Minibuffer completion
 (use-package marginalia
   :ensure t
   :init
