@@ -108,6 +108,10 @@
    ("C-c n g" . denote-grep))
   :config
   (setq denote-directory (expand-file-name "~/Documents/org/"))
+  (setq denote-sort-dired-extra-prompts nil)
+  (setq denote-sort-dired-default-sort-component 'title)
+  (setq denote-sort-dired-default-reverse-sort 1)
+  
 
   ;; Automatically rename Denote buffers when opening them so that
   ;; instead of their long file name they have, for example, a literal
