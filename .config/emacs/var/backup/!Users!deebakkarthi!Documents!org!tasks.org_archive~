@@ -1,0 +1,485 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/deebakkarthi/Documents/org/tasks.org
+
+
+* DONE CS7457                                                        :cs7457:
+CLOSED: [2026-01-29 Thu 19:17]
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-16 Mon 17:16
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-01-29 Thu 19:17]
+:END:
+** DONE Reading [4/4]
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE A Multifaceted Look at Starlink Performance
+CLOSED: [2025-11-10 Mon 16:50] DEADLINE: <2025-11-10 Mon 11:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-10 Mon 16:50]
+CLOCK: [2025-11-09 Sun 17:52]--[2025-11-09 Sun 18:52] =>  1:00
+:END:
+*** DONE RPKI-Based Location-Unaware Tor Guard Relay Selection Algorithms 
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-17 Mon 11:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Lightning: A Reconfigurable Photonic- Electronic SmartNIC for Fast and Energy- Efficient Inference 
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-24 Mon 11:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Entanglement improves coordination in distributed systems
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-03 Wed 11:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+** DONE Host Network Project [1/1]
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Play with the given code
+CLOSED: [2026-01-29 Thu 19:16]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-01-29 Thu 19:16]
+:END:
+
+
+* DONE CS6354                                                        :cs6354:
+CLOSED: [2026-01-29 Thu 19:17]
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-16 Mon 17:16
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-01-29 Thu 19:17]
+:END:
+** DONE CS6354 HW2 [3/3]
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-24 Mon 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Problem 1
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Problem 2
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Problem 3
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+** DONE Microbenchmarking Project [14/14]
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 1 Function Call Overhead
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 2. Context Switch Overhead 
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 3. Instruction Fetch Throughput 
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 4. Eﬀective Instruction Throughput
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 5. Load/Store Service Rate 
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 6. Branch Misprediction Penalty
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 7. Integer Execution Unit Bandwidth
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Phase 2 Writeup
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-20 Thu>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 8. Cache Latencies (L1I/L1D/L2/L3) 
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 9. Cache Bandwidth (L1I/L1D/L2/L3)
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 10. Main Memory (DRAM) Latency
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 11. Main Memory (DRAM) Bandwidth
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE 12. SMT Contention & Symbiosis
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Final Writeup
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+
+** DONE Reading [9/9]
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** CANCEL A Case for Direct-Mapped Caches
+CLOSED: [2025-11-10 Mon 16:49] DEADLINE: <2025-11-10 Mon 09:30>
+:LOGBOOK:
+- State "CANCEL"     from "TODO"       [2025-11-10 Mon 16:49]
+:END:
+*** CANCEL A case for two-way skewed-associative caches 
+CLOSED: [2025-11-10 Mon 16:49] DEADLINE: <2025-11-10 Mon 09:30>
+:LOGBOOK:
+- State "CANCEL"     from "TODO"       [2025-11-10 Mon 16:49]
+:END:
+*** DONE Improving Direct-Mapped Cache Performance by the Addition of a Small Fully-Associative Cache and Prefetch Buffers
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-12 Wed 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Chapter 2, 3 of A Primer on Hardware Prefetching
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-12 Wed 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Principles of Secure Processor Architecture Design
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-17 Wed 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Covert and Side Channels due to Processor Architecture, ACSAC 2006
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-17 Wed 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Last-Level Cache Side-Channel Attacks are Practical, IEEE S&P 2015
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-11-17 Wed 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Chapters 8.5-8.6 from Principles of Secure Processor Architecture Design
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-01 Mon 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE New cache designs for thwarting software cache-based side channel attacks, ISCA 2007
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-01 Mon 09:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+
+
+* DONE CS6316                                                        :cs6316:
+CLOSED: [2026-01-29 Thu 19:17]
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-16 Mon 17:16
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-01-29 Thu 19:17]
+:END:
+
+** DONE HW3 [7/7]
+CLOSED: [2025-11-19 Wed 16:05] DEADLINE: <2025-11-17 Mon 23:59>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Q1
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Q2
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Q3
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Q4
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Programming Q1
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Programming Q2
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+*** DONE Programming Q3
+CLOSED: [2025-11-19 Wed 16:05]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-19 Wed 16:05]
+:END:
+
+** DONE Final Project [3/3]
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+
+*** DONE Write report
+CLOSED: [2025-11-10 Mon 16:50] DEADLINE: <2025-11-10 Mon 23:59>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-10 Mon 16:50]
+:END:
+*** DONE Setup baseline environment
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Get baseline results
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+
+
+* DONE CS6222                                                        :cs6222:
+CLOSED: [2026-01-29 Thu 19:17]
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-16 Mon 17:16
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-01-29 Thu 19:17]
+:END:
+** DONE Final Project [1/1]
+CLOSED: [2026-02-02 Mon 12:09] DEADLINE: <2025-12-02 Tue>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:09]
+:END:
+*** DONE Initial reading of the paper
+CLOSED: [2026-02-02 Mon 12:10]
+:LOGBOOK:
+- State "DONE"       from "DONE"       [2026-02-02 Mon 12:11]
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:10]
+:END:
+** DONE CS6222 HW2 [1/1]
+CLOSED: [2026-02-02 Mon 12:10] DEADLINE: <2025-11-09 Sun>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:10]
+:END:
+*** DONE Q5
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+** DONE CS6222 HW3 [5/5]
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "DONE"       [2026-02-02 Mon 12:11]
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q1
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q2
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q3
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q4
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q5
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+** DONE CS6222 HW4 [7/7]
+CLOSED: [2026-02-02 Mon 12:11] DEADLINE: <2025-12-09 Tue 13:59>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q1
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q2
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q3
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q4
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q5
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q6
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+*** DONE Q7
+CLOSED: [2026-02-02 Mon 12:11]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-02 Mon 12:11]
+:END:
+
+
+
+
+* DONE Write a paper summary abour VERT
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-16 Mon 17:16
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_OLPATH: MRA
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: mra
+:END:
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2025-11-09 Sun 15:49]
+| Headline                             | Time   |      |
+|--------------------------------------+--------+------|
+| *Total time*                         | *1:14* |      |
+|--------------------------------------+--------+------|
+| \_  Write a paper summary abour VERT |        | 1:14 |
+#+END:
+
+CLOSED: [2025-11-09 Sun 15:49] DEADLINE: <2025-11-09 Sun>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-11-09 Sun 15:49]
+CLOCK: [2025-11-09 Sun 14:28]--[2025-11-09 Sun 15:42] =>  1:14
+:END:
+
+* DONE Add the quantrics survey to Mini-project 1
+CLOSED: [2026-02-16 Mon 17:48] SCHEDULED: <2026-02-16 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-16 Mon 17:48
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_OLPATH: Real-time embedded Systems
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-16 Mon 17:48]
+:END:
+
+
+* TODO Prepare for quiz
+DEADLINE: <2026-02-17 Tue 23:59>
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-18 Wed 17:29
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_OLPATH: Software Analysis
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: TODO
+:END:
+Portions
+- Fuzzing
+- Symbolic Execution
+- Concrete
+- Distance Function
+- Everything till Concolic
+
+
+* TODO Read Mutation Testing Papers
+DEADLINE: <2026-02-18 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-18 Wed 17:29
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_OLPATH: Software Analysis
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: TODO
+:END:
+
+
+* DONE HW4 [2/2]
+CLOSED: [2026-02-19 Thu 16:38] DEADLINE: <2026-02-19 Thu 11:59>
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-02-19 Thu 16:39
+:ARCHIVE_FILE: ~/Documents/org/tasks.org
+:ARCHIVE_OLPATH: Real-time embedded Systems
+:ARCHIVE_CATEGORY: tasks
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2026-02-19 Thu 16:38]
+:END:
+- [X] Q1
+- [X] Q2
+

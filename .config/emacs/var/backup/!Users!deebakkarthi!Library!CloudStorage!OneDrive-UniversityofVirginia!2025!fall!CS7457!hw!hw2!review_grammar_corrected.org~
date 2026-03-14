@@ -1,0 +1,31 @@
+**Score:**  
+5/5
+
+**Strengths:**  
+- Tackles an important problem with a previously unexplored approach.  
+- Uses real-world data instead of controlled tests, which is more indicative.  
+- Includes a plethora of diagrams illustrating architectures and graphs that clearly show the differences.  
+- All plugins are available as open source, helping future researchers.  
+- Data is anonymized to protect the privacy of participants.
+
+**Weaknesses:**  
+- There are very few weaknesses, just some nitpicking.  
+- Figures 6 and 7 could have switched places.  
+- There was a point about how Zoom's congestion control made the encoder reduce its bitrate rather than using SVC at the SFU. Does this imply that congestion on one path can cause the quality for everyone to decrease, as the data at the origin is now being encoded in lower quality?
+
+**Summary:**  
+This paper is about computing fine-grained metrics (at the packet level) of a Zoom network flow with no cooperation from the end hosts.  
+**Motivation:**  
+- Zoom and other video conferencing applications are becoming more essential as time goes on. They also have very strict performance requirements. For network administrators to improve performance, they need metrics to base their evaluation on. Collecting these metrics from the end client or the Zoom server is not fine-grained enough. Collecting them at the per-packet level requires some work, as Zoom uses a proprietary protocol and the header structure is unknown.
+
+**Reverse Engineering Zoom's Protocol:**  
+***How to Detect Zoom Traffic?***  
+- Detecting traffic to Zoom's servers is trivial since those are publicly available.  
+- For 1:1 meetings, Zoom uses a P2P architecture. Detecting this is not trivial because the traffic is sent to a private IP address.  
+- The authors identified that before each of these P2P connections, there is a STUN exchange with a Zoom server's port *3478* from an ephemeral port. The same ephemeral port is then used for the P2P connection. They hypothesized that all traffic from this port within a specified timeout period is Zoom traffic.  
+- False positives can easily be filtered by header inspection.
+
+***What Does Zoom's Header Look Like?***  
+- Based on previous studies, it is known that Zoom uses RTP under the hood, embedded in a custom header. By looking for patterns matching those of an RTP header, the authors were able to identify both the RTP part and the Zoom header part.  
+- Specifically, they noticed that plotting the values for each offset period yielded patterns
+

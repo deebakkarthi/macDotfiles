@@ -1,0 +1,62 @@
+#+TITLE: Building Flexible, Low-Cost Wireless Access Networks With Magma
+#+AUTHOR: Deebakkarthi Chinnasame Rani (brg8ve)
+#+latex_header: \hypersetup{colorlinks=true,linkcolor=magenta}  
+
+* Score
+4/5
+
+* Strengths
+- Allows the operators to use commodity hardware preventing vendor lock in. This will further increase
+  competition and inturn foster innovation. This is very important for new network operators that don't
+  want to shell out big money. 
+
+* Weaknesses
+- All of these are very slight nitpicking
+- I felt like they could have explained their hypothesis better. I initially thought they were introducing some
+  alternative to RANs itself. But then as the paper went on, I realized that they were introducing a new network core.
+  But if a company already operates a network then I am perplexed about how magma reduces their cost? Because they have to
+  get the RAN in both cases. And if they already have a network core then they just need to wire it up.
+
+- What if having a clean state everytime is beneficial? We just saw in
+  the SCION paper that having to adhere to past standards can hold
+  back innovation. The fact that 3GPP can wipe the slate clean and
+  start over for each generation could be not as bad.  There is also
+  an arguement to be made that there isn't much progress during a
+  generation as the components cannot be changed. Whereas in Magma our
+  innovation is limited by how much software we develop. So there
+  could be practically infinite innovation.
+
+  
+
+
+* Summary
+
+** Introduction
+- The reason of people not having Internet is that they are in situations where it doesn't make financial sense
+  to provide services. We have to lower the expense of operating a network in these areas.
+
+- Wifi doesn't scale up. Cellular stations don't scale down.
+  
+- The fundamental problem with existing network core is that the choice of the RAN influences our network stack
+
+- This is different from Computer networks as our stack doesn't change if we switch from WiFi to Ethernet. Infact the above layers
+  don't care if it is from WiFi or the Ethernet. This is missing in cellular networks
+
+
+** Magma Architecture
+The key componets of Magma are:
+- Some sort of radio access
+- Access Gateway
+- Orchestrator
+
+
+The key idea of Magma is to create a wrapper of some sort where you don't have to worry about RAN specific calls
+This is analogous to Java where you target your program to the JVM and there is a well defined API for you to do that
+The underlying VM takes care of translating it to the appropriate host machine. 
+
+
+Magma uses a heirarchical SDN architecture to scale even with a centralized point of control
+
+
+
+* Review

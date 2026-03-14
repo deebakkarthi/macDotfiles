@@ -38,5 +38,8 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export HOMEBREW_TEMP="$HOME/.local/tmp"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-
+export SVABENCH_ROOT="/Users/deebakkarthi/.local/src/sva_bench"
 export PATH="$HOME/.elan/bin:$PATH"
+
+export  PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+

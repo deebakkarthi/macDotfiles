@@ -69,6 +69,9 @@ vim.o.backup = false
 vim.o.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
 vim.o.undofile = true
 
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
+
 -- Clear the highlighted results of the previous search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
@@ -92,6 +95,8 @@ vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 -- Yank into system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("n", "<leader>pv", "<cmd>tabnew<cr><cmd>Oil<cr>")
 
 -- Highlight the text that was yanked
 vim.api.nvim_create_autocmd("TextYankPost", {

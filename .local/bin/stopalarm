@@ -1,0 +1,2 @@
+#!/bin/sh
+open ~/.local/share/alarm.png

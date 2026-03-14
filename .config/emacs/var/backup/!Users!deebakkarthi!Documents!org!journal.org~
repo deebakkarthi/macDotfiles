@@ -1,0 +1,59 @@
+* <2025-11-11 Tue> 
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2025-11-13 Thu 17:36]
+| Headline          | Time   |      |
+|-------------------+--------+------|
+| *Total time*      | *1:45* |      |
+|-------------------+--------+------|
+| <2025-11-11 Tue>  | 1:45   |      |
+| \_  Assertion Gen |        | 1:12 |
+| \_  CS6222        |        | 0:33 |
+#+END:
+
+** Assertion Gen
+:LOGBOOK:
+CLOCK: [2025-11-11 Tue 17:17]--[2025-11-13 Thu 17:37] => 48:20
+CLOCK: [2025-11-11 Tue 11:31]--[2025-11-11 Tue 12:00] =>  0:29
+:END:
+- Watched bits of https://www.youtube.com/watch?v=H3tsP9tjYdY&t=1312s
+** CS6222
+:LOGBOOK:
+CLOCK: [2025-11-11 Tue 12:00]--[2025-11-11 Tue 12:33] =>  0:33
+:END:
+- Reading for class
+
+* <2025-11-10 Mon>
+#+BEGIN: clocktable :scope subtree :maxlevel 2
+#+CAPTION: Clock summary at [2025-11-10 Mon 22:28]
+| Headline                             | Time   |      |
+|--------------------------------------+--------+------|
+| *Total time*                         | *5:39* |      |
+|--------------------------------------+--------+------|
+| <2025-11-10 Mon>                     | 5:39   |      |
+| \_  CS6222 HW2 Q5                    |        | 4:01 |
+| \_  Writing ML report (Cleanup of... |        | 0:52 |
+| \_  Writing networks review          |        | 0:46 |
+#+END:
+
+:LOGBOOK:
+** CS6222 HW2 Q5
+:LOGBOOK:
+CLOCK: [2025-11-10 Mon 19:53]--[2025-11-10 Mon 21:08] =>  1:15
+CLOCK: [2025-11-10 Mon 19:29]--[2025-11-10 Mon 19:53] =>  0:24
+CLOCK: [2025-11-10 Mon 16:56]--[2025-11-10 Mon 17:19] =>  0:23
+CLOCK: [2025-11-10 Mon 19:00]--[2025-11-10 Mon 19:24] =>  0:24
+CLOCK: [2025-11-10 Mon 17:24]--[2025-11-10 Mon 17:47] =>  0:23
+CLOCK: [2025-11-10 Mon 17:48]--[2025-11-10 Mon 18:12] =>  0:24
+CLOCK: [2025-11-10 Mon 18:12]--[2025-11-10 Mon 18:36] =>  0:24
+CLOCK: [2025-11-10 Mon 18:36]--[2025-11-10 Mon 19:00] =>  0:24
+:END:
+** Writing ML report (Cleanup of grammar, tables and bibtex entries)
+CLOCK: [2025-11-10 Mon 16:20]--[2025-11-10 Mon 16:45] =>  0:25
+CLOCK: [2025-11-10 Mon 15:52]--[2025-11-10 Mon 16:19] =>  0:27
+** Writing networks review
+CLOCK: [2025-11-10 Mon 15:26]--[2025-11-10 Mon 15:46] =>  0:20
+CLOCK: [2025-11-10 Mon 14:59]--[2025-11-10 Mon 15:25] =>  0:26
+:END:
+
+
+

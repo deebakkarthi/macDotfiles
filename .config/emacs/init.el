@@ -93,8 +93,7 @@
 
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "CANCEL(c!)" "DONE(d!)")))
-
+      '((sequence "TODO(t)" "|" "DONE(d!)")))
 
 (use-package denote
   :ensure t

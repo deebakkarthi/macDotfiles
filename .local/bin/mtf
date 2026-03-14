@@ -1,0 +1,3 @@
+#!/bin/sh
+file="$(date +"%Y_%m_%d").md"
+touch $file

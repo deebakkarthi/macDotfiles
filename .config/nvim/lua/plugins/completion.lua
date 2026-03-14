@@ -11,6 +11,8 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		-- Format the completion buffer
 		"onsails/lspkind.nvim",
+		-- Progress messages
+		"j-hui/fidget.nvim",
 	},
 	config = function()
 		local cmp = require("cmp")

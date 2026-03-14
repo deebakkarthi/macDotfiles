@@ -1,0 +1,73 @@
+#+title:      How to setup certbot using webroot
+#+date:       [2025-07-23 Wed 19:25]
+#+filetags:   :certbot:nginx:
+#+identifier: 20250723T192511
+
+* Goals
+- Create an nginx config to serve static pages
+- Force =HTTPS=
+- Canonicalize
+  - Reroute everything to include the =www= subdomain
+- Setup =certbot=
+
+* =nginx= config
+
+#+BEGIN_SRC
+# Force https
+server {
+	listen 80;
+	listen [::]:80;
+	server_name example.com    www.example.com;
+	return 301 https://www.example.com$request_uri;
+}
+
+# Canonicalize
+server{
+        listen 443 ssl;
+        listen [::]:443 ssl;
+        server_name example.com;
+
+        ssl_certificate /etc/letsencrypt/live/www.example.com/fullchain.pem;
+        ssl_certificate_key     /etc/letsencrypt/live/www.example.com/privkey.pem;
+
+        return 301 https://www.example.com$request_uri;
+
+}
+
+# Actual server
+server {
+        listen 443 ssl;
+        listen [::]:443 ssl;
+        server_name www.example.com;
+  
+        ssl_certificate /etc/letsencrypt/live/www.example.com/fullchain.pem;
+        ssl_certificate_key     /etc/letsencrypt/live/www.example.com/privkey.pem;
+
+        location / {
+                root /var/www/example.com;
+        }
+}
+#+END_SRC
+  
+ - Setup a catch-all to force HTTPS
+ - Canonicalize non-www requests to www
+ - Serve the requests
+   
+* SSL certificates
+- Make sure that the SSL certificate contains both the domains
+  - i.e =www.example.com= and =example.com=
+- This is because SSL connections happen first. So even though we will never use the non-www version
+  if we have to get a SSL certificate for it. If we don't have a certificate then the client can never
+  make a connection
+
+* Certbot
+- Make sure that you listen on both IPv4 and IPv6.
+- Don't know if it is official but certbot sometimes requests using IPv6 and if you don't listen on that
+  the challenge fails
+- Use the =--webroot= option with nginx. This allows automatic renewals without stopping nginx and allows flexibility
+  in the nginx config. Using the ==--nginx== also works but the automatic editing by certbot caused issues in the past
+  for me.
+- Check using =certbot renew --verbose --dry-run=
+- Newer versions of certbot include a systemd unit to manage renewals. So the old way of cronjob is not necessary anymore.
+  
+  

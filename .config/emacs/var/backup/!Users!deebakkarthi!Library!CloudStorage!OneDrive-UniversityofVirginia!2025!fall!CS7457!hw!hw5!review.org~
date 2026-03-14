@@ -1,0 +1,60 @@
+#+TITLE: Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google’s Datacenter Network
+#+AUTHOR: Deebakkarthi Chinnasame Rani (brg8ve)
+#+latex_header: \hypersetup{colorlinks=true,linkcolor=magenta}  
+
+* Score
+5/5
+
+* Strengths
+- This work condenses down a decade's worth of knowledge of managing possibly the largest datacenters in the world into a concise paper
+- The team took a wildly different route at the start of the project with the hypothesis that exploiting Moore's law by constantly using the
+  newest cheap off-shelf merchant silicon will lead to the best result.
+- They backed this up with a decade long of data and almost 3 magnitudes of bandwidth increase.
+- Captures some of the future innovation in networking such as Software defined Networking by using a centralized control structure
+- Covers almost all of the possible impediments one would encounter in deploying such a massive network down to the copper wiring challenges.
+- Highlight the mistakes they made so that future works can avoid costly pitfalls
+
+* Weaknesses
+
+* Summary
+This paper is about the evolution of Google's datacenter network.
+
+** Motivation
+- As traffic between servers on a datacenter increased there was need for the redesign of the network topologies
+  used.
+- The existing state of the art topology was limited by the size of the core switch used atop of the network and
+  had scaling issues both in cost and performance
+- The need of redundancy both in terms storage, compute and more important power demanded a equal distribution of
+  bandwidth across servers.
+- All of these factors lead to Google rethinking their network.
+
+** Core tenets
+The three main tenets of Google's approach are as follows
+
+1. Clos Topology
+2. Off-the shelf merchant silicon
+3. Centralized control protocol
+
+
+** Network Evolution
+
+| Generation   | Biggest Change                                                |
+|--------------+---------------------------------------------------------------|
+| Firehose 1.0 | Changed to a clos topology. Used servers as switches          |
+| Firehose 1.1 | Changed to use a custom built switch.                         |
+|              | Redundant links to the aggregator which had redundancy itself |
+| Watchtower   | Switched to traditional switch chassis using newer silicon.   |
+|              | Bundling cables.                                              |
+| Saturn       | Uses 24x10G silicon.                                          |
+| Jupiter      | 40G silicon                                                   |
+
+
+** Control Protocols
+- Traditional spanning tree protocol will negate all the parallel path in order to prevent any loops. So Google had to use a different control system.
+- Usually control protocols are designed so that switches can act autonomously to learn network changes and routing paths. But due to the nature of a datacenter
+  the roles each switch take is not dynamic. It is largely static. So Google went with a Centralized Control Protocol called *Firepath*. The switches still
+  communicated about links going down but the global data was obtained from a Firepath master.
+
+* Review
+- Well written in depth paper about creating one of the largest scale datacenter networks in the world. Captures all of the advances
+  made in networking during that decade and how they adapted it. Serves as guide for future large scale endevors.

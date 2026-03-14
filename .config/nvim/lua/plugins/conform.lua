@@ -34,6 +34,11 @@ return {
 					"--style=file:/Users/deebakkarthi/.local/share/nvim/clang-format",
 				},
 			},
+			black = {
+				prepend_args = {
+					"--line-length=79",
+				},
+			},
 		},
 	},
 	init = function()
