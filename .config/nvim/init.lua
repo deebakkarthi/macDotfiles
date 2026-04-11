@@ -69,8 +69,11 @@ vim.o.backup = false
 vim.o.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
 vim.o.undofile = true
 
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+-- Recognize .v files as verilog instead of V-lang
+vim.g.filetype_v = "verilog"
+
+--vim.opt.spelllang = "en_us"
+--vim.opt.spell = true
 
 -- Clear the highlighted results of the previous search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
