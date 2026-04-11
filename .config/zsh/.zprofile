@@ -43,3 +43,5 @@ export PATH="$HOME/.elan/bin:$PATH"
 
 export  PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
+export  PATH="$HOME/.local/oss-cad-suite/bin:$PATH"
+
