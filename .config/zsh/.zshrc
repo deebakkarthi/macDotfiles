@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+fpath=($HOME/.local/share/zsh/site-functions $fpath)
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' use-cache 1
@@ -36,3 +37,4 @@ export HISTFILE=0
 . $ZDOTDIR/aliasrc && source $ZDOTDIR/aliasrc
 
 eval "$(zoxide init zsh --cmd cd)"
+

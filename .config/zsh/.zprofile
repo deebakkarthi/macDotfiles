@@ -44,4 +44,20 @@ export PATH="$HOME/.elan/bin:$PATH"
 export  PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
 
 export  PATH="$HOME/.local/oss-cad-suite/bin:$PATH"
+export PATH="$HOME/.local/src/zig/zig-out/bin:$PATH"
 
+# OG from https://grml.org, modified by ysap.sh
+export LESS_TERMCAP_mb=$'\e[1;31m'
+export LESS_TERMCAP_md=$'\e[1;31m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[1;33;44m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[4;1;32m'
+export LESS_TERMCAP_mr=$'\e[7m'
+export LESS_TERMCAP_mh=$'\e[2m'
+export LESS_TERMCAP_ZN=$'\e[74m'
+export LESS_TERMCAP_ZV=$'\e[75m'
+export LESS_TERMCAP_ZO=$'\e[73m'
+export LESS_TERMCAP_ZW=$'\e[75m'
+export MANPAGER='less'
