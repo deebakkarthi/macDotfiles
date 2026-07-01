@@ -61,3 +61,9 @@ export LESS_TERMCAP_ZV=$'\e[75m'
 export LESS_TERMCAP_ZO=$'\e[73m'
 export LESS_TERMCAP_ZW=$'\e[75m'
 export MANPAGER='less'
+
+
+export LDFLAGS="-L/opt/homebrew/opt/ncurses/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ncurses/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ncurses/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"

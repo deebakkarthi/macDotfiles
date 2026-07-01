@@ -89,6 +89,7 @@
   (global-set-key (kbd "C-c l") #'org-store-link)
   (global-set-key (kbd "C-c a") #'org-agenda)
   (global-set-key (kbd "C-c c") #'org-capture)
+  (setq org-return-follows-link t)
   )
 
 
@@ -152,3 +153,7 @@
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+
+(require 'epa-file)
+(epa-file-enable)
+(setq epa-file-select-keys nil)

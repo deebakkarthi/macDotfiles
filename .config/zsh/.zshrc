@@ -38,3 +38,5 @@ export HISTFILE=0
 
 eval "$(zoxide init zsh --cmd cd)"
 
+GPG_TTY=$(tty)
+export GPG_TTY

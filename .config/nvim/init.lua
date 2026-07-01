@@ -59,6 +59,11 @@ vim.o.confirm = true
 
 vim.o.termguicolors = true
 
+-- Temporarily disabling this
+-- tmux 3.7a broke scrolling in ncurces applications
+-- TURN IT BACK ON AFTER THE PATCH GETS MERGED UPSTREAM IN TMUX
+vim.o.termsync = false
+
 vim.o.wrap = false
 
 vim.o.incsearch = true
