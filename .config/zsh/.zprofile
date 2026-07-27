@@ -39,12 +39,8 @@ export HOMEBREW_TEMP="$HOME/.local/tmp"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export SVABENCH_ROOT="/Users/deebakkarthi/.local/src/sva_bench"
-export PATH="$HOME/.elan/bin:$PATH"
 
 export  PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
-
-export  PATH="$HOME/.local/oss-cad-suite/bin:$PATH"
-export PATH="$HOME/.local/src/zig/zig-out/bin:$PATH"
 
 # OG from https://grml.org, modified by ysap.sh
 export LESS_TERMCAP_mb=$'\e[1;31m'
@@ -69,3 +65,5 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ncurses/lib/pkgconfig"
 export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 
 . $ZDOTDIR/secretrc && source $ZDOTDIR/secretrc
+
+export PATH="$PATH:$HOME/perl5/bin"
