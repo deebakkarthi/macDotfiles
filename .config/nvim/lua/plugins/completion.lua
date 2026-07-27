@@ -18,6 +18,11 @@ return {
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
 		cmp.setup({
+			completion = {
+				-- Disable autocomplete
+				-- Trigger manually using C-space
+				autocomplete = false,
+			},
 			view = {
 				entries = {
 					name = "custom",
@@ -55,6 +60,7 @@ return {
 					select = true,
 				}),
 				["<tab>"] = cmp.config.disable,
+				["<C-Space>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "lazydev" },
