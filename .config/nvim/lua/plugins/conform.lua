@@ -31,9 +31,14 @@ return {
 		},
 		formatters = {
 			clang_format = {
-				prepend_args = {
-					"--style=file:/Users/deebakkarthi/.local/share/nvim/clang-format",
-				},
+				-- Disabling this temporarily
+				-- There is no way to specify a default style
+				-- for clang-format. --fallback-style=<STYLE>
+				-- only allows for presets and not custom
+				-- files.
+				-- prepend_args = {
+				-- 	"--fallback-style=file:/Users/deebakkarthi/.local/share/nvim/clang-format",
+				-- },
 			},
 			black = {
 				prepend_args = {

@@ -67,3 +67,4 @@ export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 . $ZDOTDIR/secretrc && source $ZDOTDIR/secretrc
 
 export PATH="$PATH:$HOME/perl5/bin"
+export PATH="$PATH:$(gem env gemdir)/bin"
