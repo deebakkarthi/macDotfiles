@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+# Link the resume class file
+ln -sf "$HOME/.local/src/cover.latex/cover.cls" .
+# Grab the latest copy
+cp "$HOME/.local/src/cover.latex/main.tex" .
