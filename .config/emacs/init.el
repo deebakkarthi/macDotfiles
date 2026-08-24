@@ -4,9 +4,11 @@
 
 (setq package-user-dir (expand-file-name "elpa" user-emacs-directory))
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/")) ;; ELPA and NonGNU ELPA are default in Emacs28
+ ;; ELPA and NonGNU ELPA are default in Emacs28
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3") ;; w/o this Emacs freezes when refreshing ELPA
+ ;; w/o this Emacs freezes when refreshing ELPA
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (package-initialize)
 (setq package-enable-at-startup nil)
@@ -25,7 +27,8 @@
 
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (setq gc-cons-percentage 0.1))) ;; Default value for `gc-cons-percentage'
+	    ;; Default value for `gc-cons-percentage'
+            (setq gc-cons-percentage 0.1)))
 
 (add-hook 'emacs-startup-hook
           (lambda ()
@@ -39,21 +42,32 @@
 
 (no-littering-theme-backups)
 
-
 (setq visible-bell nil)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
+;; Turn off soft wrap
+(setq visual-line-mode nil)
+;; Turn off hard wrap
+(auto-fill-mode -1)
+;; Don't truncate lines. Let them go off screen
+(setq truncate-lines t)
+
+
+(setopt display-fill-column-indicator-column 80)
+;; I want this on all the buffers
+(global-display-fill-column-indicator-mode)
+
 ;; A frame is OS window. What you would call a "pane" is what emacs
 ;; considers a window.
-(set-frame-font "IosevkaTerm Nerd Font Mono:size=18" nil t)
+(set-face-attribute 'default nil :family "Ubuntu Mono" :height 240 :weight 'regular)
 
 ;; Disable the damn thing by making it disposable.
 (setq custom-file (make-temp-file "emacs-custom-"))
 
-(use-package doom-modeline
-  :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 15)))
+;; (use-package doom-modeline
+;;   :init (doom-modeline-mode 1)
+;;   :custom ((doom-modeline-height 15)))
 
 (use-package evil
   :init
@@ -121,6 +135,14 @@
 
 (use-package ef-themes)
 (ef-themes-select 'ef-dark)
+
+(ef-themes-with-colors
+  (custom-set-faces
+   `(fill-column-indicator ((,c :height 1.0
+				:background ,magenta
+				:foreground ,magenta)))))
+
+
 
 (use-package nerd-icons
   :ensure t)

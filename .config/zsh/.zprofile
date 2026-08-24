@@ -68,3 +68,5 @@ export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 
 export PATH="$PATH:$HOME/perl5/bin"
 export PATH="$PATH:$(gem env gemdir)/bin"
+
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker

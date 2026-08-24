@@ -27,6 +27,8 @@ return {
 			yaml = { "prettierd" },
 			c = { "clang_format" },
 			cpp = { "clang_format" },
+			css = { "prettierd" },
+			scss = { "prettierd" },
 			tex = { "tex-fmt" },
 		},
 		formatters = {

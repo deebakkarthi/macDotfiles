@@ -41,3 +41,8 @@ eval "$(zoxide init zsh --cmd cd)"
 GPG_TTY=$(tty)
 export GPG_TTY
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/deebakkarthi/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
