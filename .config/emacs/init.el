@@ -93,11 +93,21 @@
   (evil-collection-init))
 
 (use-package org
+  :ensure nil ;; Don't have to install, it is built in now
   :config
+  ;; When in a heading M-RET creates a new heading without splitting the OG one
   (setq org-M-RET-may-split-line '((default . nil)))
+
+  ;; When M-RET is invoked in content written after a heading, create the
+  ;; new heading AFTER the content instead of after the heading
   (setq org-insert-heading-respect-content t)
+
+  ;; List of dirs org-agenda has to search to find tasks in
   (setq org-directory "~/Documents/org/")
-  (setq org-agenda-files (list org-directory))
+  (setq org-agenda-files "~/Documents/org/tasks.org")
+
+  ;; The state changes are logged into a `drawer' instead of polluting
+  ;; the content
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
   (global-set-key (kbd "C-c l") #'org-store-link)
@@ -106,9 +116,8 @@
   (setq org-return-follows-link t)
   )
 
-
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d!)")))
+      '((sequence "TODO(t)" "|" "CANCEL(c!)" "DONE(d!)")))
 
 (use-package denote
   :ensure t

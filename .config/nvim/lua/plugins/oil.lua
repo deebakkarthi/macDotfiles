@@ -22,6 +22,7 @@ return {
 				constrain_cursor = "name",
 			})
 			vim.keymap.set("n", "-", "<cmd>Oil<CR>")
+			vim.keymap.set("n", "_", "<cmd>tabnew<CR><cmd>Oil<CR>")
 		end,
 	},
 }
