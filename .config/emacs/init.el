@@ -1,5 +1,6 @@
-;; Variables are locally scoped
 ;; -*- lexical-binding: t; -*-
+;; Variables are locally scoped
+
 (require 'package)
 
 (setq package-user-dir (expand-file-name "elpa" user-emacs-directory))
@@ -102,9 +103,8 @@
   ;; new heading AFTER the content instead of after the heading
   (setq org-insert-heading-respect-content t)
 
-  ;; List of dirs org-agenda has to search to find tasks in
-  (setq org-directory "~/Documents/org/")
-  (setq org-agenda-files "~/Documents/org/tasks.org")
+  ;; Only use tasks.org
+  (setq org-agenda-files '("~/Documents/org/tasks.org"))
 
   ;; The state changes are logged into a `drawer' instead of polluting
   ;; the content
@@ -114,6 +114,15 @@
   (global-set-key (kbd "C-c a") #'org-agenda)
   (global-set-key (kbd "C-c c") #'org-capture)
   (setq org-return-follows-link t)
+
+  (setq org-capture-templates
+	'(("t" "TODO" entry (file "~/Documents/org/tasks.org")
+           "* TODO %?\n"))
+	)
+
+  ;; Don't display done tasks in agenda view
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-if-done t)
   )
 
 (setq org-todo-keywords

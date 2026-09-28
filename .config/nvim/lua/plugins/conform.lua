@@ -24,7 +24,7 @@ return {
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
 			javascriptreact = { "prettierd" },
-			yaml = { "prettierd" },
+			yaml = { "yamlfmt" },
 			c = { "clang_format" },
 			cpp = { "clang_format" },
 			css = { "prettierd" },
