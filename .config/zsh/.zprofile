@@ -27,10 +27,6 @@ case $OSTYPE in
         ;;
 esac
 
-PLAN9=/usr/local/plan9
-export PLAN9
-PATH=$PATH:$PLAN9/bin
-
 . "$CARGO_HOME/env"
 PATH="$PATH:$HOME/.local/usr/bin:$HOME/.local/bin"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
