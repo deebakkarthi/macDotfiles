@@ -30,6 +30,7 @@ return {
 			css = { "prettierd" },
 			scss = { "prettierd" },
 			tex = { "tex-fmt" },
+			toml = { "tombi" },
 		},
 		formatters = {
 			clang_format = {

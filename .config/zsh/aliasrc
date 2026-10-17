@@ -5,7 +5,6 @@ alias song-dl='noglob yt-dlp -x  --embed-thumbnail --audio-quality 0 --audio-for
 alias c="cd $COLLEGE_DIR"
 alias s="cd $HOME/Documents/Drive/sb/"
 alias ls="eza"
-alias grep="grep --color=always"
 alias conda_init="source $HOME/.local/bin/conda_init"
 alias sva=". sva.sh"
 alias make="gmake"

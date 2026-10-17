@@ -3,4 +3,4 @@
 # Take a host and file path
 # cat that file into the system clipboard
 
-ssh "$1" cat "$2" | pbcopy
+ssh "$1" \"cat "$2"\" | pbcopy
